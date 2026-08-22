@@ -1,0 +1,21 @@
+# Comandos usados no Azure CLI
+
+1. az login
+
+2. az group create -l brazilsouth -n pipeline_nfs-rg
+
+3. az storage account create -n stpipenfe -g pipeline_nfs-rg - l brazilsouth --sku Standard_LRS --kind StorageV2 --hns true
+
+4. az storage container create --account-name stpipenfe -n bruto --auth-mode login
+
+5. az storage container create --account-name stpipenfe -n tratado --auth-mode login
+
+6. az sql server create -n sql-nfs -g pipeline_nfs-rg -l brazilsouth --admin-user 'sqladmin' --admin-password '------'
+
+7. az sql server firewall-rule create -g pipeline_nfs-rg --server sql-nfe -n AllowMyIP --start-ip-address X.X.X.X --end-ip-address X.X.X.X
+
+8. az sql server firewall-rule create -g pipeline_nfs-rg --server sql-nfs -n AllowAzureServices --start-ip-address 0.0.0.0 --end-ip-address 0.0.0.0
+
+9. az sql db create -g pipeline_nfs-rg --server sql-nfs --name PRD_pipenfs --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 1 --use-free-limit --free-limit-exhaustion-behavior AutoPause --backup-storage-redundancy Local
+
+10. az role assignment create --assignee minha_id --role "Storage Blob Data Contributor" --scope /subscriptions/id_minha_assinatura/resourceGroups/pipeline_nfs-rg/providers/Microsoft.Storage/storageAccounts/stpipenfe
