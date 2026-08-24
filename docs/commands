@@ -24,7 +24,7 @@
 
 12. az functionapp create -g pipeline_nfs-rg --consumption-plan-location brazilsouth --runtime python --runtime-version 3.11 --functions-version 4 --os-type linux --name funcpipenfe --storage-account stpipenfe
 
-13. az functionapp config appsettings set --name funcpipenfe -g pipeline_nfs-rg --settings "SQL_CONNECTION_STRING=Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-nfs.database.windows.net,1433;Database=PRD_pipenfs;Uid=sqladmin;Pwd=senhadodb;Encrypt=yes;TrustServerCertificate=no;"
+13. az functionapp config appsettings set --name funcpipenfe -g pipeline_nfs-rg --settings "SQL_CONNECTION_STRING=Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-nfs.database.windows.net,1433;Database=PRD_pipenfs;Uid=sqladmin;Pwd=senhadodb;Encrypt=yes;TrustServerCertificate=yes;"
 
 14. func init nfs-function --python
 
