@@ -46,16 +46,20 @@ No meu estágio, trabalho com a manutanção e melhorias do sistema de notas fis
 - [x] Firewall e RBAC configurados
 - [x] Conexão ao SQL Database
 - [x] Criação da tabela de visualização
+- [x] Criação e teste da Function localmente
 - [ ] Azure Function (parser de XML)
 - [ ] Dashboard Power BI
 
 ## Aprendizados
 
 - Criação de storage account, conteineres, sql server, regras de firewall do sql server e atribuição de funções (RBAC) via Azure CLI.
-- Provider `Microsoft.Sql` precisa estar registrado na subscription antes de criar recursos SQL (`az provider register`)
-- `az sql db create` usa backup geo-redundante (`Geo`) por padrão — usar `--backup-storage-redundancy Local` pra manter tudo em LRS
-- Conexão ao database via VSCODE e criação da única tabela que alimentará o dashboard
+- Provider `Microsoft.Sql` precisa estar registrado na subscription antes de criar recursos SQL (`az provider register`).
+- `az sql db create` usa backup geo-redundante (`Geo`) por padrão — usar `--backup-storage-redundancy Local` pra manter tudo em LRS.
+- Conexão ao database via VSCODE e criação da única tabela que alimentará o dashboard.
+- Criação da Function, criação do código principal, requiremnts, .gitignore, entre outros.
+- Teste da Function localmente com XML de teste gerado pela IA (bruto -> tratado + banco).
+- Troubleshooting: falta de driver ODBC e timeout de TLS (local.settings.json)
 
 ## Data da Última Alteração
 
-- 23/08/2026 17:48
+- 23/08/2026 21:20

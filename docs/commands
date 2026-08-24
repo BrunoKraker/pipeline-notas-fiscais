@@ -19,3 +19,17 @@
 9. az sql db create -g pipeline_nfs-rg --server sql-nfs --name PRD_pipenfs --edition GeneralPurpose --compute-model Serverless --family Gen5 --capacity 1 --use-free-limit --free-limit-exhaustion-behavior AutoPause --backup-storage-redundancy Local
 
 10. az role assignment create --assignee minha_id --role "Storage Blob Data Contributor" --scope /subscriptions/id_minha_assinatura/resourceGroups/pipeline_nfs-rg/providers/Microsoft.Storage/storageAccounts/stpipenfe
+
+11. winget install Microsoft.Azure.FunctionsCoreTools
+
+12. az functionapp create -g pipeline_nfs-rg --consumption-plan-location brazilsouth --runtime python --runtime-version 3.11 --functions-version 4 --os-type linux --name funcpipenfe --storage-account stpipenfe
+
+13. az functionapp config appsettings set --name funcpipenfe -g pipeline_nfs-rg --settings "SQL_CONNECTION_STRING=Driver={ODBC Driver 18 for SQL Server};Server=tcp:sql-nfs.database.windows.net,1433;Database=PRD_pipenfs;Uid=sqladmin;Pwd=senhadodb;Encrypt=yes;TrustServerCertificate=no;"
+
+14. func init nfs-function --python
+
+15. winget install Microsoft.msodbcsql.18
+
+16. func start
+
+17. az storage blob upload --account-name stpipenfe --container-name bruto --name teste_nfe.xml --file C:\Users\bruno\Downloads\teste_nfe.xml --auth-mode login #XML DE TESTE
