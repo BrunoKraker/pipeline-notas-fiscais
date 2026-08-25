@@ -47,7 +47,7 @@ No meu estágio, trabalho com a manutanção e melhorias do sistema de notas fis
 - [x] Conexão ao SQL Database
 - [x] Criação da tabela de visualização
 - [x] Criação e teste da Function localmente
-- [ ] Azure Function (parser de XML)
+- [x] Azure Function (parser de XML)
 - [ ] Dashboard Power BI
 
 ## Aprendizados
@@ -58,8 +58,9 @@ No meu estágio, trabalho com a manutanção e melhorias do sistema de notas fis
 - Conexão ao database via VSCODE e criação da única tabela que alimentará o dashboard.
 - Criação da Function, criação do código principal, requiremnts, .gitignore, entre outros.
 - Teste da Function localmente com XML de teste gerado pela IA (bruto -> tratado + banco).
-- Troubleshooting: falta de driver ODBC e timeout de TLS (local.settings.json)
+- Troubleshooting: falta de driver ODBC e timeout de TLS (local.settings.json).
+- Publicação da function no Azure e testes.
 
 ## Data da Última Alteração
 
-- 23/08/2026 21:20
+- 24/08/2026 23:58

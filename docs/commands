@@ -33,3 +33,5 @@
 16. func start
 
 17. az storage blob upload --account-name stpipenfe --container-name bruto --name teste_nfe.xml --file C:\Users\bruno\Downloads\teste_nfe.xml --auth-mode login #XML DE TESTE
+
+18. func azure functionapp publish funcpipenfe #func publicada e pronta para rodar no Azure
