@@ -81,7 +81,7 @@ No meu estágio, trabalho com a manutanção e melhorias do sistema de notas fis
 
 1. Clone o repositório
 ```powershell
-   git clone <https://github.com/BrunoKraker/pipeline-notas-fiscais>
+   git clone https://github.com/BrunoKraker/pipeline-notas-fiscais
    cd pipeline-notas-fiscais
 ```
 
