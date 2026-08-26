@@ -35,3 +35,7 @@
 17. az storage blob upload --account-name stpipenfe --container-name bruto --name teste_nfe.xml --file C:\Users\bruno\Downloads\teste_nfe.xml --auth-mode login #XML DE TESTE
 
 18. func azure functionapp publish funcpipenfe #func publicada e pronta para rodar no Azure
+
+19. Get-ChildItem "C:\Users\bruno\Downloads\xmls_teste\xmls_teste\*.xml" | ForEach-Object {
+    az storage blob upload --account-name stpipenfe --container-name bruto --name $_.Name --file $_.FullName --auth-mode login
+}
